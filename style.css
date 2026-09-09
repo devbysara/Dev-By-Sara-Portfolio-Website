@@ -6,6 +6,7 @@
 
 :root {
     --bg: #f2f0eb;
+    --bg-dim: #f2f0ebe8;
     --white: #faf9f6;
     --sage: #7a9080;
     --sage-light: #a8bfb0;
@@ -332,12 +333,20 @@ body {
 
 .second-section {
     min-height: 100vh;
-    background: radial-gradient(ellipse at center, #c5869b15 0%, transparent 60%),
-    var(--bg);
+    background: url(images/about-bg.webp);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5vw;
+    position: relative;
+}
+
+.second-section::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: radial-gradient(ellipse at center, #c5869b15 0%, transparent 60%),
+    var(--bg-dim);
 }
 
 .about-text {
@@ -345,6 +354,8 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .sara-des h2 {
@@ -357,6 +368,7 @@ body {
     width: 100%;
     max-width: 650px;
     color: var(--dark);
+    text-align: justify;
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -405,6 +417,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-right: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .sd-logo {
@@ -478,7 +492,7 @@ form {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin: 4rem 0;
+    margin: 2rem 0;
     padding: 4vw 2vw;
 }
 
@@ -638,11 +652,14 @@ form button:active {
         margin-top: 3rem;
         align-items: center;
     }
+    .sara-des p {
+        text-align: left;
+    }
     .sara-skills {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 18px;
     }
     .sara-skills span {
         padding: 3vw;
@@ -684,7 +701,7 @@ form button:active {
         padding: 20vw 8vw 0 8vw;
     }
     form {
-        margin: 4rem 0;
+        margin: 8rem 0;
     }
     form > * {
         width: 80%;
@@ -748,8 +765,14 @@ form button:active {
         justify-content: center;
         padding: 6vw;
     }
+    .about-text {
+        margin-top: 4rem;
+    }
     .sara-des h2 {
         text-align: center;
+    }
+    .sara-des p {
+        max-width: 760px;
     }
     .sara-skills {
         display: flex;
@@ -769,6 +792,7 @@ form button:active {
     }
     .about-logo {
         margin-right: 0;
+        margin-bottom: 4rem;
     }
     .sd-logo {
         margin-top: 5rem;
@@ -777,10 +801,16 @@ form button:active {
         flex-direction: column;
         justify-content: center;
         gap: 10px;
-        padding-top: 8vw;
+        padding-top: 10vw;
+    }
+    .form-text h2 {
+        font-size: 1.5rem;
+    }
+    .form-text p {
+        font-size: 0.9rem;
     }
     form {
-        margin: 4rem 0;
+        margin: 6rem 0;
     }
     form > * {
         border-bottom-width: 1px;
@@ -847,11 +877,10 @@ form button:active {
         margin-top: 4rem;
     }
     .about-text p {
-        text-align: justify;
-        width: 100%;
+        max-width: 760px;
     }
     .sara-skills {
-        margin-top: 0.8rem;
+        margin-top: 1rem;
     }
     .sara-skills span {
         padding: 1vw 2vw;
