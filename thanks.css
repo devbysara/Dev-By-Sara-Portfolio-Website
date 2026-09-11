@@ -88,6 +88,6 @@ body::before {
 
 @media (max-width: 1024px) {
     .submit-text {
-        padding: 10vw 8vw;
+        padding: 14vw 8vw;
     }
 }
