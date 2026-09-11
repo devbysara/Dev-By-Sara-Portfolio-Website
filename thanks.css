@@ -15,7 +15,7 @@ body {
     align-items: center;
     gap: 15px;
     min-height: 100vh;
-    background: url(images/thanks-bg.jpg) center no-repeat;
+    background: url(images/thanks-bg.webp) center no-repeat;
     background-size: 100% 100%;
     padding: 0 4vw;
     position: relative;
