@@ -189,15 +189,15 @@ body {
 }
 
 .cl {
-    color: plum;
+    color: #c9a0dc;
 }
 
 .dact {
-    color: deeppink;
+    color: #ec8fb0;
 }
 
 .ep {
-    color: burlywood;
+    color: #e8b878;
 }
 
 .prompt p:nth-child(4),
