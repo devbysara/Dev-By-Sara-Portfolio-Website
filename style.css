@@ -6,11 +6,11 @@
 
 :root {
     --bg: #f2f0eb;
-    --bg-dim: #f2f0ebe8;
+    --bg-dim: #f2f0ebf1;
     --white: #faf9f6;
     --sage: #7a9080;
     --sage-light: #a8bfb0;
-    --sage-dim: rgba(122,144,128,0.12);
+    --sage-dim: rgba(145, 187, 156, 0.12);
     --pink: #d4899a;
     --pink-light: #ecc4cc;
     --pink-dark: #b06878;
@@ -496,7 +496,30 @@ form {
     padding: 4vw 2vw;
 }
 
-form > * {
+form .form-error {
+    visibility: hidden;
+    border-bottom: none;
+    color: #d45858;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 0 0.3vw 0;
+    margin-top: -4%;
+    width: 100%;
+}
+
+form .form-error.visible {
+    visibility: visible;
+}
+
+.form-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form-info input,
+.form-info textarea {
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--sage);
@@ -514,27 +537,46 @@ form > * {
     color: var(--pink-light);
 }
 
-form input::placeholder,
-form textarea::placeholder {
+.form-info input::placeholder,
+.form-info textarea::placeholder {
     color: var(--sage);
     font-weight: 600;
     font-size: 1rem;
 }
 
+.form-info span {
+    position: absolute;
+    display: none;
+    top: 85%;
+    font-size: 0.9rem;
+    color: var(--pink-light);
+    background: var(--sage-dim);
+    padding: 0.3vw 0.6vw;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.form-info span.visible {
+    display: block;
+}
+
+.form-info:last-of-type span:last-of-type {
+    margin-top: 0.3rem;
+}
+
 form button {
+    background: none;
+    border: none;
     color: var(--pink-light);
     font-size: 1.1rem;
     border-bottom: none;
     cursor: pointer;
     width: fit-content;
     transition: color 0.3s ease;
-    padding: 1vw 0 0 0;
+    margin: 1rem 0;
 }
 
-form button:hover {
-    color: var(--sage-light);
-}
-
+form button:hover,
 form button:active {
     color: var(--sage-light);
 }
@@ -702,12 +744,25 @@ form button:active {
     }
     form {
         margin: 8rem 0;
+        gap: 50px;
     }
-    form > * {
+    form .form-error {
+        width: 80%;
+        margin-top: -30%;
+        padding: 0;
+    }
+    .form-info input,
+    .form-info textarea {
         width: 80%;
         padding: 0 3vw 6vw 3vw;
         border-width: 1px;
         font-size: 1rem;
+    }
+    .form-info span {
+        padding: 1vw;
+    }
+    form button {
+        margin-top: -2%;
     }
     .rights {
         padding: 6vw;
@@ -812,7 +867,11 @@ form button:active {
     form {
         margin: 6rem 0;
     }
-    form > * {
+    form .form-error {
+        margin-top: -10%;
+    }
+    .form-info input,
+    .form-info textarea {
         border-bottom-width: 1px;
         padding: 2vw;
         width: 70%;
@@ -903,7 +962,11 @@ form button:active {
     form {
         margin: 6rem 0;
     }
-    form > * {
+    form .form-error {
+        margin-top: -8%;
+    }
+    .form-info input,
+    .form-info textarea {
         border-bottom-width: 1px;
     }
 }

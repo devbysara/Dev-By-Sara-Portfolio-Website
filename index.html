@@ -145,15 +145,27 @@
             <h2>Let's Build Something <span>Together</span></h2>
             <p>Have a project in mind? I'd love to hear about it</p>
         </div>
-        <form action="https://formspree.io/f/xljedaen" method="POST">
-            <input type="text" name="name" placeholder="Your name">
-            <input type="email" name="email" placeholder="Your email">
-            <textarea name="message" placeholder="What are you thinking of building?"></textarea>
+        <form action="https://formspree.io/f/mljrjbvk" method="POST" novalidate>
+            <p class="form-error" id="form-error">Something went wrong, please try again!</p>
+            <div class="form-info">
+                <input type="text" name="name" id="name" placeholder="Your name">
+                <span class="field-error" id="name-error">Mind sharing your name?</span>
+            </div>
+            <div class="form-info">
+                <input type="email" name="email" id="email" placeholder="Your email">
+                <span class="field-error" id="email-error">I'll need an email to get back to you!</span>
+                <span class="field-error" id="email-error-invalid">Hmm, that doesn't look like a valid email!</span>
+            </div>
+            <div class="form-info">
+                <textarea name="message" id="message" placeholder="What are you thinking of building?"></textarea>
+                <span class="field-error" id="message-error">Tell me a bit about your project!</span>
+            </div>
             <button type="submit">Send Message →</button>
         </form>
         <div class="rights">
             <p>&copy; 2026 All rights reserved | <span>devbysara</span></p>
         </div>
     </footer>
+<script src="form.js"></script>
 </body>
 </html>

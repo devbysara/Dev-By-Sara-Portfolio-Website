@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: #7fb39a;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 100vh;
+    background: url(images/thanks-bg.jpg) center no-repeat;
+    background-size: 100% 100%;
+    padding: 0 4vw;
+    position: relative;
+    font-family: 'Libre Baskerville', Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: #f2f0ebef;
+}
+
+.submit-text {
+    position: relative;
+    z-index: 1;
+    background: #e9d8df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 8vw 6vw;
+    border-radius: 20px;
+}
+
+.submit-text h1 {
+    font-size: 2.2rem;
+    color: #7a9080;
+}
+
+.submit-text p {
+    font-size: 1.2rem;
+    max-width: 350px;
+    text-align: center;
+    color: #464e43;
+    font-weight: 600;
+}
+
+.submit-text a {
+    text-decoration: none;
+    color: #b06878;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.submit-text a:hover,
+.submit-text a:active {
+    color: #8cad8c;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logos a {
+    width: 30px;
+    height: 30px;
+    fill: #66796b;
+    transition: fill 0.3s ease;
+}
+
+.logos a:hover,
+.logos a:active {
+    fill: #d49ba9;
+}
+
+@media (max-width: 1024px) {
+    .submit-text {
+        padding: 10vw 8vw;
+    }
+}
