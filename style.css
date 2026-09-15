@@ -570,6 +570,7 @@ form button {
     color: var(--pink-light);
     font-size: 1.1rem;
     border-bottom: none;
+    font-family: 'Libre Baskerville', Arial, Helvetica, sans-serif;
     cursor: pointer;
     width: fit-content;
     transition: color 0.3s ease;
